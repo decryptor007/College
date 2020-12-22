@@ -1,9 +1,11 @@
+import 'package:test/test.dart';
+
 void main() {
-  var test=new queue();
-  test.push(10);
-  //test.push(100);
-  test.pop();
-  print(test.isEmpty());
+  test('Stack Testing', () {
+    var s = new stack<int>();
+    s.push(1);
+    expect(s.getLength(),2);
+  });
 }
 class queue<T>{
   var myQueue=<T>[];
@@ -45,3 +47,4 @@ class stack<T>{
     return myStack.length;
   }
 }
+
